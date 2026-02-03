@@ -1,9 +1,9 @@
 function showMenusTemplate(indexMenu) {
     return `
-    <article class="all_burger_menu">
-        <div class="burger_menu">
+    <article class="complete_menu_section">
+        <div class="individual_menu">
             <img src="${dishes.burger[indexMenu].image}">
-            <div>
+            <div class="main_dishes">
                 <h3>${dishes.burger[indexMenu].name}</h3>
                 <p>${dishes.burger[indexMenu].description}</p>
             </div>
@@ -17,10 +17,10 @@ function showMenusTemplate(indexMenu) {
 
 function showPizzaTemplate(indexPizza) {
         return `
-        <article class="all_burger_menu">
-        <div class="burger_menu">
+        <article class="complete_menu_section">
+        <div class="individual_menu">
             <img src="${dishes.pizza[indexPizza].image}">
-            <div>
+            <div class="main_dishes">
                 <h3>${dishes.pizza[indexPizza].name}</h3>
                 <p>${dishes.pizza[indexPizza].description}</p>
             </div>
@@ -34,10 +34,10 @@ function showPizzaTemplate(indexPizza) {
 
 function showSaladTemplate(indexSalad) {
         return `
-        <article class="all_burger_menu">
-        <div class="burger_menu">
+        <article class="complete_menu_section">
+        <div class="individual_menu">
             <img src="${dishes.salat[indexSalad].image}">
-            <div>
+            <div class="main_dishes">
                 <h3>${dishes.salat[indexSalad].name}</h3>
                 <p>${dishes.salat[indexSalad].description}</p>
             </div>

@@ -1,17 +1,28 @@
-.burger_menu {
+.individual_menu {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 750px;
     background-color: #FDEADC;
+    padding: 5px;
+    border-radius: 16px;
 }
 
-.all_burger_menu {
+.complete_menu_section {
     margin-top: 24px;
     margin-bottom: 24px;
 }
 
+.main_dishes {
+    flex: 1;
+}
+
 .orange_line {
+    display: flex;
+    align-items: center;
+    color: white;
     background-color: #E76C1F;
-    height: 24px;
+    height: 42px;
+    gap: 12px;
+    margin-block: 42px;
 }
