@@ -1,0 +1,20 @@
+.split_the_screen {
+    display: flex;
+    flex-direction: row;
+}
+
+.split_the_screen_content {
+    width: calc(100% - 320px);
+}
+
+.split_the_screen_shopping_cart {
+    width: 320px;
+}
+
+.shopping_cart {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 500px;
+    position: sticky;
+    top: 0;
+}

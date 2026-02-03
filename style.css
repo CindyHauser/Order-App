@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     height: 90px;
-    background-color: rgb(231, 108, 31);    
+    background-color: rgb(231, 108, 31);
 }
 
 .monitor_border_header {
@@ -21,6 +21,13 @@ body {
     width: 100%;
     max-width: 1440px;
     height: 90px;
+}
+
+.main_footer {
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    background-color: rgb(231, 108, 31);
 }
 
 .hero_photo {
@@ -66,10 +73,11 @@ h1 {
 }
 
 .monitor_border_main {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto; /*auto sorgt für gleiche Abstände links und rechts*/
-  display: flex;
-  flex-direction: column;
-  flex:1;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    /*auto sorgt für gleiche Abstände links und rechts*/
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
