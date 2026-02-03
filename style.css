@@ -10,7 +10,7 @@ body {
 .main_header {
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 90px;
     background-color: rgb(231, 108, 31);    
 }
 
@@ -20,12 +20,12 @@ body {
     align-items: center;
     width: 100%;
     max-width: 1440px;
-    height: 100px;
+    height: 90px;
 }
 
 .hero_photo {
     width: 100%;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -34,9 +34,10 @@ body {
 }
 
 .burger_overlay {
+    height: 200px;
     position: absolute;
     left: 50%;
-    bottom: -44%;
+    bottom: -48%;
     transform: translate(-50%, -50%);
 }
 
@@ -44,8 +45,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 120px;
+    padding-top: 100px;
     font-weight: 600;
+    margin-bottom: 36px;
 }
 
 h1 {
@@ -61,4 +63,13 @@ h1 {
 .heading div img {
     height: 24px;
     margin-top: 10px;
+}
+
+.monitor_border_main {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto; /*auto sorgt für gleiche Abstände links und rechts*/
+  display: flex;
+  flex-direction: column;
+  flex:1;
 }

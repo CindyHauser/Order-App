@@ -1,0 +1,17 @@
+.burger_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 750px;
+    background-color: #FDEADC;
+}
+
+.all_burger_menu {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.orange_line {
+    background-color: #E76C1F;
+    height: 24px;
+}
