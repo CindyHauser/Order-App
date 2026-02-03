@@ -17,7 +17,7 @@ let dishes = {
             "price": 14.90,
             "description": "Rind, Käse, Tomaten, Zwiebeln, Kopfsalat",
             "image": "red-burger.png"
-        },
+        }
     ],
 
     "pizza": [
@@ -38,7 +38,7 @@ let dishes = {
             "price": 12.90,
             "description": "Rote Zwiebeln, Oliven, Pilze, Mozzarella",
             "image": "pizza-funghi.png"
-        },
+        }
     ],
 
         "salat": [
@@ -59,7 +59,7 @@ let dishes = {
             "price": 16.90,
             "description": "Gemischter Salat, Kirschtomaten, rote Zwiebeln, Muscheln, Tintenfischringe, Garnelen, Dijon-Senf-Zitronen-Dressing mit Dill",
             "image": "salad-fish.png"
-        },
+        }
     ]
 
 };
