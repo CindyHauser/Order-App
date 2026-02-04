@@ -1,14 +1,15 @@
-function showMenusTemplate(indexMenu) {
+function showBurgerTemplate(indexBurger) {
     return `
     <article class="complete_menu_section">
         <div class="individual_menu">
-            <img src="${dishes.burger[indexMenu].image}">
+            <img src="${dishes.burger[indexBurger].image}">
             <div class="main_dishes">
-                <h3>${dishes.burger[indexMenu].name}</h3>
-                <p>${dishes.burger[indexMenu].description}</p>
+                <h3>${dishes.burger[indexBurger].name}</h3>
+                <p>${dishes.burger[indexBurger].description}</p>
             </div>
             <div>
-                <p>${dishes.burger[indexMenu].price.toFixed(2).replace(".", ",")} €</p>
+                <p>${dishes.burger[indexBurger].price.toFixed(2).replace(".", ",")} €</p>
+                <button id="change_button" onclick="pushToBasket(${indexBurger})" class="add_button">Add</button>
             </div>
         </div>
     </article>
@@ -46,5 +47,11 @@ function showSaladTemplate(indexSalad) {
             </div>
         </div>
     </article>
+    `
+}
+
+function showBasketTemplate(indexBasket) {
+    return `
+    <p>${basket[indexBasket].name} - ${basket[indexBasket].price.toFixed(2).replace(".", ",")} €</p>
     `
 }

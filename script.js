@@ -12,8 +12,8 @@ function renderAll() {
 function renderBurger() {
     let menuSelectionRef = document.getElementById("menu_selection");
     menuSelectionRef.innerHTML = "";
-    for (let indexMenu = 0; indexMenu < dishes.burger.length; indexMenu++) {
-        menuSelectionRef.innerHTML += showMenusTemplate(indexMenu);
+    for (let indexBurger = 0; indexBurger < dishes.burger.length; indexBurger++) {
+        menuSelectionRef.innerHTML += showBurgerTemplate(indexBurger);
     }
 }
 
@@ -32,3 +32,5 @@ function renderSalad() {
         saladSelectionRef.innerHTML += showSaladTemplate(indexSalad);
     }
 }
+
+console.log(dishes);

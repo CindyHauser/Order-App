@@ -26,3 +26,8 @@
     gap: 12px;
     margin-block: 42px;
 }
+
+.add_button {
+    border-radius: 16px;
+    cursor: pointer;
+}
