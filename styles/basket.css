@@ -24,3 +24,10 @@
     background-color: #363534;
     color: #FDEADC;
 }
+
+.showBasketMenu {
+    margin-bottom: 6px;
+    width: 290px;
+    border: 1px solid #FDEADC;
+    border-radius: 10px;
+}

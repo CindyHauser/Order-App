@@ -9,7 +9,7 @@ function showBurgerTemplate(indexBurger) {
             </div>
             <div>
                 <p>${dishes.burger[indexBurger].price.toFixed(2).replace(".", ",")} €</p>
-                <button id="change_button" onclick="pushToBasket(${indexBurger})" class="add_button">Add</button>
+                <button id="change_button" onclick="pushToBasket('burger', ${indexBurger})" class="add_button">Add</button>
             </div>
         </div>
     </article>
@@ -27,6 +27,7 @@ function showPizzaTemplate(indexPizza) {
             </div>
             <div>
                 <p>${dishes.pizza[indexPizza].price.toFixed(2).replace(".", ",")} €</p>
+                <button id="change_button" onclick="pushToBasket('pizza', ${indexPizza})" class="add_button">Add</button>
             </div>
         </div>
     </article>
@@ -44,6 +45,7 @@ function showSaladTemplate(indexSalad) {
             </div>
             <div>
                 <p>${dishes.salat[indexSalad].price.toFixed(2).replace(".", ",")} €</p>
+                <button id="change_button" onclick="pushToBasket('salat', ${indexSalad})" class="add_button">Add</button>
             </div>
         </div>
     </article>
@@ -52,6 +54,6 @@ function showSaladTemplate(indexSalad) {
 
 function showBasketTemplate(indexBasket) {
     return `
-    <p>${basket[indexBasket].name} - ${basket[indexBasket].price.toFixed(2).replace(".", ",")} €</p>
+    <p class="showBasketMenu"> ${basket[indexBasket].amount}x ${basket[indexBasket].name} <br> ${basket[indexBasket].price.toFixed(2).replace(".", ",")} €</p>
     `
 }
