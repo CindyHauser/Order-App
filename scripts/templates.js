@@ -55,7 +55,7 @@ function showSaladTemplate(indexSalad) {
 function showBasketTemplate(indexBasket) {
     return `
     <div class="showBasketMenu"> 
-        <p>${basket[indexBasket].amount}x ${basket[indexBasket].name} <br> ${basket[indexBasket].price.toFixed(2).replace(".", ",")} €</p>
+        <p>${basket[indexBasket].amount}x ${basket[indexBasket].name} <br> ${(basket[indexBasket].amount * basket[indexBasket].price).toFixed(2).replace(".", ",")} €</p>
         <button class="btn_increase_recycle" onclick="deleteDish(${indexBasket})"><img src="./assets/icons/recycle-bin.png" alt="Papierkorb"></button>
         <button class="btn_increase_recycle" onclick="increaseAmount(${indexBasket})"><img src="./assets/icons/plus-circle.svg" alt="erhöhe die Menge"></button>
     </div>    

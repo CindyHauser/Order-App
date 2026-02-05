@@ -18,12 +18,16 @@
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
-    height: 600px;
+    height: 650px;
     position: sticky;
     top: 0;
     background-color: #363534;
     color: #FDEADC;
 }
+
+/* .shopping_window {
+    
+} */
 
 .showBasketMenu {
     margin-bottom: 6px;
@@ -44,4 +48,9 @@
     border-radius: 10px;
     background-color: #FDEADC;
     width: 20px;
+}
+
+.costs_dishes {
+    border-top: 1px solid #FDEADC;
+    width: 250px;
 }
