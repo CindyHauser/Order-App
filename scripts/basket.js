@@ -8,12 +8,6 @@ function renderBasket() {
     };
 }
 
-// let allDishes = [
-//     ...dishes.burger,      Spread Operator
-//     ...dishes.pizza,
-//     ...dishes.salat
-// ]
-
 function pushToBasket(category, index) {
     let newDish = dishes[category][index];
     let foundDish = basket.find((element) => element.name === newDish.name);
@@ -24,4 +18,16 @@ function pushToBasket(category, index) {
         newDish.amount++;
     }
     renderBasket();
+}
+
+function increaseAmount(index) {
+    let increaseAmount = basket[index];
+    increaseAmount.amount++;
+    renderBasket()
+}
+
+function deleteDish(index) {
+    basket[index].amount = 1;
+    basket.splice(index, 1);
+    renderBasket()
 }

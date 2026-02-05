@@ -6,7 +6,8 @@ function init() {
 function renderAll() {
     renderBurger();
     renderPizza();
-    renderSalad()
+    renderSalad();
+    renderBasket()
 }
 
 function renderBurger() {

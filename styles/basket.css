@@ -30,4 +30,18 @@
     width: 290px;
     border: 1px solid #FDEADC;
     border-radius: 10px;
+    padding-inline: 6px;
+}
+
+.btn_increase_recycle {
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+}
+
+.btn_increase_recycle img {
+    border-radius: 10px;
+    background-color: #FDEADC;
+    width: 20px;
 }
