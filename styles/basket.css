@@ -25,16 +25,20 @@
     color: #FDEADC;
 }
 
-/* .shopping_window {
-    
-} */
+#addedMenus {
+    height: 450px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #FDEADC #363534;
+}
 
 .showBasketMenu {
-    margin-bottom: 6px;
-    width: 290px;
+    margin-bottom: 16px;
+    width: 280px;
     border: 1px solid #FDEADC;
     border-radius: 10px;
     padding-inline: 6px;
+    margin-right: 5px;
 }
 
 .btn_increase_recycle {
@@ -50,7 +54,18 @@
     width: 20px;
 }
 
+.for_btn_and_price {
+    display: flex;
+    justify-content: space-between;
+}
+
 .costs_dishes {
     border-top: 1px solid #FDEADC;
     width: 250px;
+}
+
+.distance_price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
 }

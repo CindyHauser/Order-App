@@ -77,9 +77,18 @@
 
                         <div id="shopping_window">
                             <div class="costs_dishes">
-                                <p>Preis:             </p>
-                                <p>Lieferkosten: </p>
-                                <p>Gesamtpreis: </p>
+                                <p class="distance_price">
+                                    <span>Preis:</span>
+                                    <span id="price"></span>
+                                </p>
+                                <p class="distance_price">
+                                    <span>Lieferkosten:</span>
+                                    <span id="deliveryCosts"></span>
+                                </p>
+                                <p class="distance_price">
+                                    <span>Gesamtpreis:</span>
+                                    <span id="totalPrice"></span>
+                                </p>
                                 <button onclick="orderNow()">Bestellen</button>
                             </div>
                         </div>

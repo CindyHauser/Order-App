@@ -33,5 +33,3 @@ function renderSalad() {
         saladSelectionRef.innerHTML += showSaladTemplate(indexSalad);
     }
 }
-
-console.log(dishes);
