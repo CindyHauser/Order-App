@@ -2,19 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 750px;
+    max-width: 800px;
     background-color: #FDEADC;
     padding: 5px;
     border-radius: 16px;
+    padding-right: 24px;
 }
 
 .complete_menu_section {
-    margin-top: 24px;
     margin-bottom: 24px;
 }
 
 .main_dishes {
     flex: 1;
+    padding-left: 6px;
+}
+
+.add_and_price {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 56px;
 }
 
 .orange_line {
@@ -25,6 +33,7 @@
     height: 42px;
     gap: 12px;
     margin-block: 42px;
+    border-radius: 10px;
 }
 
 .add_button {
@@ -33,5 +42,5 @@
     border: none;
     background-color: white;
     font-weight: 700;
-    padding: 5px;
+    padding: 8px;
 }

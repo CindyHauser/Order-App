@@ -4,12 +4,12 @@
 }
 
 .split_the_screen_content {
-    width: calc(100% - 320px);
+    width: calc(100% - 360px);
 }
 
 .split_the_screen_shopping_cart {
     padding-top: 42px;
-    width: 320px;
+    width: 360px;
 }
 
 .shopping_cart {
@@ -23,10 +23,18 @@
     top: 0;
     background-color: #363534;
     color: #FDEADC;
+    margin-bottom: 8px;
+    box-shadow: -7px 15px 15px 1px black;
+}
+
+.shopping_cart h2{
+    border-bottom: 1px solid #FDEADC;
+    font-size: 26px;
+    margin-bottom: 8px;
 }
 
 #addedMenus {
-    height: 450px;
+    height: 416px;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #FDEADC #363534;
@@ -62,10 +70,31 @@
 .costs_dishes {
     border-top: 1px solid #FDEADC;
     width: 250px;
+    margin-top: 8px;
 }
 
 .distance_price {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+}
+
+.btn_order_now {
+    cursor: pointer;
+    background-color: #E76C1F;
+    color: white;
+    border-radius: 10px;
+    padding-inline: 12px;
+    margin-top: 12px;
+    font-family: "Palanquin-Regular";
+    font-size: 20px;
+}
+
+.order_display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 24px;
+    font-style: italic;
 }

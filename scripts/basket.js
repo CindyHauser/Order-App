@@ -1,7 +1,11 @@
 let basket = [];
 
+let priceRef = document.getElementById("price");
+let deliveryCostsRef = document.getElementById("deliveryCosts");
+let totalPriceRef = document.getElementById("totalPrice");
+let basketMenus = document.getElementById("addedMenus");
+
 function renderBasket() {
-    let basketMenus = document.getElementById("addedMenus");
     basketMenus.innerHTML = "";
     for (let indexBasket = 0; indexBasket < basket.length; indexBasket++) {
         basketMenus.innerHTML += showBasketTemplate(indexBasket);
@@ -27,10 +31,21 @@ function increaseAmount(index) {
     renderBasket()
 }
 
+function reduceAmount(index) {
+    let reduceAmount = basket[index];
+    if (reduceAmount.amount > 1) {
+        reduceAmount.amount--;
+    } else{
+        deleteDish(index);
+    }
+    renderBasket();
+}
+
 function deleteDish(index) {
-    basket[index].amount = 1;
+    basket[index].amount = 1;       //amount change to ONE, else it save the old amount
     basket.splice(index, 1);
-    renderBasket()
+    renderBasket();
+    renderPrices();
 }
 
 function calculateBasketPrice() {
@@ -42,15 +57,27 @@ function calculateBasketPrice() {
 }
 
 function renderPrices() {
-    let priceRef = document.getElementById("price");
-    let deliveryCostsRef = document.getElementById("deliveryCosts");
-    let totalPriceRef = document.getElementById("totalPrice");
-
     let deliveryCosts = 4.99;
     let sumPrice = calculateBasketPrice();
     let priceToPay = sumPrice + deliveryCosts;
 
+    if (basket.length === 0) {
+        priceRef.innerHTML = `0,00 €`;
+        deliveryCostsRef.innerHTML = `0,00 €`;
+        totalPriceRef.innerHTML = `0,00 €`;
+        return;
+    };
     priceRef.innerHTML = `${sumPrice.toFixed(2).replace('.', ',')} €`;
     deliveryCostsRef.innerHTML = `${deliveryCosts.toFixed(2).replace('.', ',')} €`;
     totalPriceRef.innerHTML = `${priceToPay.toFixed(2).replace('.', ',')} €`;
+}
+
+function orderNow() {
+    if (basket.length > 0){
+    basket.length = 0;
+    basketMenus.innerHTML = `<p class="order_display"><span>Ihre Bestellung</span><span> ist unterwegs</span></p>`;
+    priceRef.innerHTML = `0,00 €`;
+    deliveryCostsRef.innerHTML = `0,00 €`;
+    totalPriceRef.innerHTML = `0,00 €`;
+    };
 }
