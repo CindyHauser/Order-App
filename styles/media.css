@@ -1,3 +1,44 @@
+@media (min-width: 600px) {
+    .x_btn {
+        display: none;
+    }
+}
+
 @media (max-width: 600px) {
-    
+    .split_the_screen_content {
+        width: 100%;
+        position: relative;
+    }
+
+    .split_the_screen {
+        flex-direction: column;
+    }
+
+    .responsive_sticky {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        bottom: 0;
+        background-color: #363534;
+        color: #FDEADC;
+        height: 64px;
+        width: 100%;
+    }
+
+    .shopping_cart {
+        display: none;
+        margin: auto;
+        position: fixed;
+    }
+
+    .split_the_screen_shopping_cart {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .opened_dialog {
+        display: flex;
+    }
 }

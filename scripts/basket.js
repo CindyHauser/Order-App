@@ -18,11 +18,11 @@ function pushToBasket(category, index) {
     let foundDish = basket.find((element) => element.name === newDish.name);
 
     if (!foundDish) {
-        basket.push({                       //have to copy the object -> to not change the original
+        basket.push({                       // i have to copy the object -> to not change the original
             name: newDish.name,
             price: newDish.price,
             amount: 1
-    });
+        });
     } else {
         foundDish.amount++;
     }
@@ -46,7 +46,6 @@ function reduceAmount(index) {
 }
 
 function deleteDish(index) {
-    basket[index].amount = 1;       //amount change to ONE, else it save the old amount
     basket.splice(index, 1);
     renderBasket();
     renderPrices();
@@ -85,4 +84,20 @@ function orderNow() {
         deliveryCostsRef.innerHTML = `0,00 €`;
         totalPriceRef.innerHTML = `0,00 €`;
     };
+}
+
+let dialogBasketRef = document.getElementById("dialogBasket");
+
+function openDialogBasket() {
+    dialogBasketRef.showModal();
+    dialogBasketRef.classList.add("opened_dialog");
+}
+
+function bubblingProtection(event) {
+    event.stopPropagation();
+}
+
+function closeDialogBasket() {
+    dialogBasketRef.close();
+    dialogBasketRef.classList.remove("opened_dialog");
 }

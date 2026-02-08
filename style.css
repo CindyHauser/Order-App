@@ -82,3 +82,7 @@ h1 {
     flex-direction: column;
     flex: 1;
 }
+
+.responsive_sticky {
+    display: none;
+}

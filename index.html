@@ -67,35 +67,45 @@
                     </div>
                     <section id="salad_selection">
                     </section>
+
+                    <button onclick="openDialogBasket()" class="responsive_sticky">
+                        <h2>Warenkorb</h2>
+                    </button>
+
                 </div>
 
                 <section class="split_the_screen_shopping_cart">
-                    <div class="shopping_cart">
-                        <h2>Warenkorb</h2>
-                        <div id="addedMenus">
+                    <dialog id="dialogBasket" class="shopping_cart" onclick="closeDialogBasket()">
+                        <div onclick="bubblingProtection(event)">
 
-                        </div>
+                            <h2>Warenkorb</h2>
+                            <button class="x_btn" onclick="closeDialogBasket()">X</button>
+                            <div id="addedMenus">
 
-                        <div id="shopping_window">
-                            <div class="costs_dishes">
-                                <p class="distance_price">
-                                    <span>Preis:</span>
-                                    <span id="price">0,00 €</span>
-                                </p>
-                                <p class="distance_price">
-                                    <span>Lieferkosten:</span>
-                                    <span id="deliveryCosts">0,00 €</span>
-                                </p>
-                                <p class="distance_price">
-                                    <span>Gesamtpreis:</span>
-                                    <span id="totalPrice">0,00 €</span>
-                                </p>
-                                <button class="btn_order_now" onclick="orderNow()">Jetzt bestellen</button>
                             </div>
-                        </div>
 
-                    </div>
+                            <div id="shopping_window">
+                                <div class="costs_dishes">
+                                    <p class="distance_price">
+                                        <span>Preis:</span>
+                                        <span id="price">0,00 €</span>
+                                    </p>
+                                    <p class="distance_price">
+                                        <span>Lieferkosten:</span>
+                                        <span id="deliveryCosts">0,00 €</span>
+                                    </p>
+                                    <p class="distance_price">
+                                        <span>Gesamtpreis:</span>
+                                        <span id="totalPrice">0,00 €</span>
+                                    </p>
+                                    <button class="btn_order_now" onclick="orderNow()">Jetzt bestellen</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </dialog>
                 </section>
+
 
             </div>
 
