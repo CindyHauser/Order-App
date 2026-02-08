@@ -18,9 +18,13 @@ function pushToBasket(category, index) {
     let foundDish = basket.find((element) => element.name === newDish.name);
 
     if (!foundDish) {
-        basket.push(newDish);
+        basket.push({                       //have to copy the object -> to not change the original
+            name: newDish.name,
+            price: newDish.price,
+            amount: 1
+    });
     } else {
-        newDish.amount++;
+        foundDish.amount++;
     }
     renderBasket();
 }
@@ -35,7 +39,7 @@ function reduceAmount(index) {
     let reduceAmount = basket[index];
     if (reduceAmount.amount > 1) {
         reduceAmount.amount--;
-    } else{
+    } else {
         deleteDish(index);
     }
     renderBasket();
@@ -73,11 +77,12 @@ function renderPrices() {
 }
 
 function orderNow() {
-    if (basket.length > 0){
-    basket.length = 0;
-    basketMenus.innerHTML = `<p class="order_display"><span>Ihre Bestellung</span><span> ist unterwegs</span></p>`;
-    priceRef.innerHTML = `0,00 €`;
-    deliveryCostsRef.innerHTML = `0,00 €`;
-    totalPriceRef.innerHTML = `0,00 €`;
+    if (basket.length > 0) {
+        console.log(basket);
+        basket.length = 0;
+        basketMenus.innerHTML = `<p class="order_display"><span>Ihre Bestellung</span><span> ist unterwegs</span></p>`;
+        priceRef.innerHTML = `0,00 €`;
+        deliveryCostsRef.innerHTML = `0,00 €`;
+        totalPriceRef.innerHTML = `0,00 €`;
     };
 }
