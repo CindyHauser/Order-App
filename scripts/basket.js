@@ -4,6 +4,7 @@ let priceRef = document.getElementById("price");
 let deliveryCostsRef = document.getElementById("deliveryCosts");
 let totalPriceRef = document.getElementById("totalPrice");
 let basketMenus = document.getElementById("addedMenus");
+let responsivMiniBasketRef = document.getElementById("responsivMiniBasket");
 
 function renderBasket() {
     basketMenus.innerHTML = "";
@@ -68,11 +69,13 @@ function renderPrices() {
         priceRef.innerHTML = `0,00 €`;
         deliveryCostsRef.innerHTML = `0,00 €`;
         totalPriceRef.innerHTML = `0,00 €`;
+        responsivMiniBasketRef.innerHTML =`Warenkorb: 0,00€`;
         return;
     };
     priceRef.innerHTML = `${sumPrice.toFixed(2).replace('.', ',')} €`;
     deliveryCostsRef.innerHTML = `${deliveryCosts.toFixed(2).replace('.', ',')} €`;
     totalPriceRef.innerHTML = `${priceToPay.toFixed(2).replace('.', ',')} €`;
+    responsivMiniBasketRef.innerHTML =`Warenkorb: ${priceToPay.toFixed(2).replace('.', ',')} €`;
 }
 
 function orderNow() {
@@ -83,6 +86,7 @@ function orderNow() {
         priceRef.innerHTML = `0,00 €`;
         deliveryCostsRef.innerHTML = `0,00 €`;
         totalPriceRef.innerHTML = `0,00 €`;
+        responsivMiniBasketRef.innerHTML =`Warenkorb: 0,00€`;
     };
 }
 

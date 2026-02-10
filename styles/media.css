@@ -1,3 +1,9 @@
+@media (max-width: 1470px) {
+    .main_header {
+        padding-inline: 22px;
+    }
+}
+
 @media (max-width: 1000px) {
     .individual_menu {
         flex-direction: column;
@@ -8,6 +14,13 @@
 
     .individual_menu img {
         height: 150px;
+        width: 100%;
+    }
+
+    .main_dishes {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
     .complete_menu_section {
@@ -44,6 +57,7 @@
     .split_the_screen_content {
         width: 100%;
         position: relative;
+        padding-inline: 12px;
     }
 
     .split_the_screen {
@@ -61,6 +75,7 @@
         color: #FDEADC;
         height: 64px;
         width: 100%;
+        border-radius: 16px;
     }
 
     .shopping_cart {
@@ -79,6 +94,10 @@
         display: flex;
     }
 
+    .opened_dialog::backdrop {   
+        background-color: rgba(0,0,0,0.4);
+    }
+
     .x_btn {
         border-radius: 10px;
         color: #FDEADC;
@@ -92,34 +111,6 @@
         justify-content: space-between;
     }
 
-}
-
-@media (max-width: 400px) {
-    .shopping_cart {
-        width: 300px;
-        height: 550px;
-        padding: 8px;
-    }
-
-    #addedMenus {
-        height: 320px;
-    }
-
-    .showBasketMenu {
-        width: 212px;
-    }
-
-    .costs_dishes {
-        width: 200px;
-    }
-
-    .distance_price {
-        font-size: 16px;
-    }
-
-    .btn_order_now {
-        font-size: 18px;
-    }
 }
 
 @media (max-width: 430px) {
@@ -184,5 +175,33 @@
     .main_footer {
         height: 56px;
         font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .shopping_cart {
+        width: 300px;
+        height: 550px;
+        padding: 8px;
+    }
+
+    #addedMenus {
+        height: 320px;
+    }
+
+    .showBasketMenu {
+        width: 212px;
+    }
+
+    .costs_dishes {
+        width: 200px;
+    }
+
+    .distance_price {
+        font-size: 16px;
+    }
+
+    .btn_order_now {
+        font-size: 18px;
     }
 }
