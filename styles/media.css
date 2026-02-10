@@ -1,3 +1,39 @@
+@media (max-width: 1000px) {
+    .individual_menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 6px;
+        width: 320px;
+    }
+
+    .individual_menu img {
+        height: 150px;
+    }
+
+    .complete_menu_section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .add_and_price {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 730px) {
+    .shopping_cart {
+        width: 310px;
+    }
+
+    .split_the_screen_content {
+        width: calc(100% - 310px);
+    }
+
+    .showBasketMenu {
+        width: 244px;
+    }
+}
+
 @media (min-width: 600px) {
     .x_btn {
         display: none;
@@ -31,6 +67,7 @@
         display: none;
         margin: auto;
         position: fixed;
+        width: 320px;
     }
 
     .split_the_screen_shopping_cart {
@@ -40,5 +77,112 @@
 
     .opened_dialog {
         display: flex;
+    }
+
+    .x_btn {
+        border-radius: 10px;
+        color: #FDEADC;
+        background-color: #363534;
+        cursor: pointer;
+        height: 26px;
+    }
+
+    .header_dialog {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .shopping_cart {
+        width: 300px;
+        height: 550px;
+        padding: 8px;
+    }
+
+    #addedMenus {
+        height: 320px;
+    }
+
+    .showBasketMenu {
+        width: 212px;
+    }
+
+    .costs_dishes {
+        width: 200px;
+    }
+
+    .distance_price {
+        font-size: 16px;
+    }
+
+    .btn_order_now {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 430px) {
+    .monitor_border_header {
+        height: 56px;
+    }
+
+    .main_header {
+        height: 56px;
+        padding-inline: 26px;
+    }
+
+    .main_header img {
+        height: 40px;
+    }
+
+    .hero_photo {
+        height: 226px;
+    }
+
+    .burger_overlay {
+        height: 116px;
+    }
+
+    .heading {
+        padding-top: 46px;
+        margin-bottom: 12px;
+    }
+
+    .heading h2 {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .individual_menu {
+        width: 280px;
+    }
+
+    .individual_menu img {
+        height: 122px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .orange_line {
+        margin-block: 24px;
+        height: 36px;
+    }
+
+    .orange_line img {
+        height: 58px;
+    }
+
+    .orange_line h2 {
+        font-size: 22px;
+    }
+
+    .main_footer {
+        height: 56px;
+        font-size: 12px;
     }
 }
