@@ -27,6 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 90px;
     background-color: rgb(231, 108, 31);
     color: white;
@@ -77,6 +78,36 @@ h1 {
 .heading div img {
     height: 24px;
     margin-top: 10px;
+}
+
+.choose_the_category {
+    background-color: rgb(253, 234, 220);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.choose_the_category span {
+    align-items: center;
+    text-decoration: underline;
+    align-self: center;
+}
+
+.choose_the_category a {
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.choose_the_category a:hover {
+    text-decoration: underline;
+}
+
+.three_categories {
+    display: flex;
+    justify-content: space-around;
 }
 
 .monitor_border_main {

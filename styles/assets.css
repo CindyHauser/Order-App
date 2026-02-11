@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 800px;
+    max-width: 900px;
     background-color: #FDEADC;
     padding: 5px;
     border-radius: 16px;
@@ -23,6 +23,7 @@
     flex-direction: column;
     align-items: baseline;
     gap: 56px;
+    font-weight: 700;
 }
 
 .orange_line {
@@ -34,6 +35,18 @@
     gap: 12px;
     margin-block: 42px;
     border-radius: 10px;
+    width: calc(100% + 360px);
+    position: relative;
+}
+
+.orange_line img {
+    position: absolute;
+    bottom: -8%;
+    height: 80px;
+}
+
+.orange_line h2 {
+    padding-left: 95px;
 }
 
 .add_button {
