@@ -19,7 +19,7 @@
 
 </head>
 
-<body onload="init()">
+<body id="body_overflow" onload="init()">
 
     <header class="main_header">
         <div class="monitor_border_header">
@@ -78,19 +78,19 @@
                     <section id="salad_selection">
                     </section>
 
-                    <button onclick="openDialogBasket()" class="responsive_sticky">
+                    <button onclick="toggleDialogBasket()" class="responsive_sticky">
                         <h2 id="responsivMiniBasket">Warenkorb: 0,00 €</h2>
                     </button>
 
                 </div>
 
                 <section class="split_the_screen_shopping_cart">
-                    <dialog id="dialogBasket" class="shopping_cart" onclick="closeDialogBasket()">
-                        <div onclick="bubblingProtection(event)">
+                    <dialog id="dialogBasket" class="shopping_cart" onclick="toggleDialogBasket()">
+                        <div class="flex_grow_for_menus" onclick="bubblingProtection(event)">
 
                             <header class="header_dialog">
                                 <h2>Warenkorb</h2>
-                                <button class="x_btn" onclick="closeDialogBasket()">X</button>
+                                <button class="x_btn" onclick="toggleDialogBasket()">X</button>
                             </header>
                             <div id="addedMenus">
 

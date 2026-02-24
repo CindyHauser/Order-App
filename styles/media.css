@@ -76,8 +76,8 @@
     }
 
     .choose_the_category a {
-    font-size: 18px;
-}
+        font-size: 18px;
+    }
 
     .responsive_sticky {
         cursor: pointer;
@@ -100,6 +100,18 @@
         width: 320px;
     }
 
+    .costs_dishes {
+        width: 200px;
+    }
+
+    .distance_price {
+        font-size: 16px;
+    }
+
+    .btn_order_now {
+        font-size: 18px;
+    }
+
     .orange_line {
         width: 100%;
     }
@@ -113,8 +125,12 @@
         display: flex;
     }
 
-    .opened_dialog::backdrop {   
-        background-color: rgba(0,0,0,0.4);
+    .opened_dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .body_overflow_hidden {
+        overflow: hidden;
     }
 
     .x_btn {
@@ -123,13 +139,24 @@
         background-color: #363534;
         cursor: pointer;
         height: 26px;
+        position: absolute;
+        right: 0;
     }
 
     .header_dialog {
-        display: flex;
-        justify-content: space-between;
+        position: relative;
     }
 
+    .flex_grow_for_menus {
+        width: 260px;
+    }
+
+    #addedMenus {
+        max-height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 430px) {
@@ -204,28 +231,15 @@
 
 @media (max-width: 400px) {
     .shopping_cart {
-        width: 300px;
-        height: 550px;
-        padding: 8px;
+        width: auto;
+        height: auto;
     }
 
-    #addedMenus {
-        height: 320px;
+    .flex_grow_for_menus {
+        width: 240px;
     }
 
     .showBasketMenu {
         width: 212px;
-    }
-
-    .costs_dishes {
-        width: 200px;
-    }
-
-    .distance_price {
-        font-size: 16px;
-    }
-
-    .btn_order_now {
-        font-size: 18px;
     }
 }

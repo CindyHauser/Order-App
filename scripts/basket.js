@@ -5,6 +5,8 @@ let deliveryCostsRef = document.getElementById("deliveryCosts");
 let totalPriceRef = document.getElementById("totalPrice");
 let basketMenus = document.getElementById("addedMenus");
 let responsivMiniBasketRef = document.getElementById("responsivMiniBasket");
+let dialogBasketRef = document.getElementById("dialogBasket");
+let bodyOverflow = document.getElementById("body_overflow");
 
 function renderBasket() {
     basketMenus.innerHTML = "";
@@ -69,39 +71,38 @@ function renderPrices() {
         priceRef.innerHTML = `0,00 €`;
         deliveryCostsRef.innerHTML = `0,00 €`;
         totalPriceRef.innerHTML = `0,00 €`;
-        responsivMiniBasketRef.innerHTML =`Warenkorb: 0,00€`;
+        responsivMiniBasketRef.innerHTML = `Warenkorb: 0,00€`;
         return;
     };
     priceRef.innerHTML = `${sumPrice.toFixed(2).replace('.', ',')} €`;
     deliveryCostsRef.innerHTML = `${deliveryCosts.toFixed(2).replace('.', ',')} €`;
     totalPriceRef.innerHTML = `${priceToPay.toFixed(2).replace('.', ',')} €`;
-    responsivMiniBasketRef.innerHTML =`Warenkorb: ${priceToPay.toFixed(2).replace('.', ',')} €`;
+    responsivMiniBasketRef.innerHTML = `Warenkorb: ${priceToPay.toFixed(2).replace('.', ',')} €`;
 }
 
 function orderNow() {
     if (basket.length > 0) {
-        console.log(basket);
         basket.length = 0;
         basketMenus.innerHTML = `<p class="order_display"><span>Ihre Bestellung</span><span> ist unterwegs</span></p>`;
         priceRef.innerHTML = `0,00 €`;
         deliveryCostsRef.innerHTML = `0,00 €`;
         totalPriceRef.innerHTML = `0,00 €`;
-        responsivMiniBasketRef.innerHTML =`Warenkorb: 0,00€`;
+        responsivMiniBasketRef.innerHTML = `Warenkorb: 0,00€`;
     };
-}
-
-let dialogBasketRef = document.getElementById("dialogBasket");
-
-function openDialogBasket() {
-    dialogBasketRef.showModal();
-    dialogBasketRef.classList.add("opened_dialog");
 }
 
 function bubblingProtection(event) {
     event.stopPropagation();
 }
 
-function closeDialogBasket() {
-    dialogBasketRef.close();
-    dialogBasketRef.classList.remove("opened_dialog");
+function toggleDialogBasket() {
+    if (dialogBasketRef.open) {
+        dialogBasketRef.close();
+        dialogBasketRef.classList.remove("opened_dialog");
+        bodyOverflow.classList.remove("body_overflow_hidden");
+    } else {
+        dialogBasketRef.showModal();
+        dialogBasketRef.classList.add("opened_dialog");
+        bodyOverflow.classList.add("body_overflow_hidden");
+    };
 }
