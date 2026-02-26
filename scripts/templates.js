@@ -63,9 +63,9 @@ function showBasketTemplate(indexBasket) {
         <div class="for_btn_and_price">
             <span>${(basket[indexBasket].amount * basket[indexBasket].price).toFixed(2).replace(".", ",")} €</span>
             <div>
-                <button class="btn_increase_recycle" onclick="reduceAmount(${indexBasket})"><img src="./assets/icons/minus.svg" alt="Menge mindern"></button>
+                <button class="btn_increase_recycle" onclick="changeAmount(false, ${indexBasket})"><img src="./assets/icons/minus.svg" alt="Menge mindern"></button>
                 <button class="btn_increase_recycle" onclick="deleteDish(${indexBasket})"><img src="./assets/icons/recycle-bin.png" alt="Papierkorb"></button>
-                <button class="btn_increase_recycle" onclick="increaseAmount(${indexBasket})"><img src="./assets/icons/plus-circle.svg" alt="erhöhe die Menge"></button>
+                <button class="btn_increase_recycle" onclick="changeAmount(true, ${indexBasket})"><img src="./assets/icons/plus-circle.svg" alt="erhöhe die Menge"></button>
             </div>
         </div>
     </div>    
