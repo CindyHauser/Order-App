@@ -152,7 +152,6 @@
     }
 
     #addedMenus {
-        max-height: 320px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -237,7 +236,7 @@
 @media (max-width: 400px) {
     .shopping_cart {
         width: auto;
-        height: auto;
+        max-height: 620px;
     }
 
     .flex_grow_for_menus {

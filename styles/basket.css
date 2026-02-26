@@ -49,6 +49,7 @@
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #FDEADC #363534;
+    max-height: 396px;
 }
 
 .showBasketMenu {
