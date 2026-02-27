@@ -32,15 +32,17 @@ function pushToBasket(category, index) {
     renderBasket();
 }
 
-function changeAmount (increaseOrReduce, index) {
+function changeAmount(increaseOrReduce, index) {
     let changeAmountRef = basket[index];
-    if (increaseOrReduce == true) {
+    if (increaseOrReduce === "increase") {
         changeAmountRef.amount++;
-    } else {
+    }
+    if (increaseOrReduce === "reduce") {
         if (changeAmountRef.amount > 1) {
             changeAmountRef.amount--;
         } else {
             deleteDish(index);
+            return;
         }
     }
     renderBasket();
